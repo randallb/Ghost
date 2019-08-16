@@ -1,0 +1,23 @@
+{
+  "server": {
+      "host": "0.0.0.0",
+      "port": 2368
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "us-cdbr-iron-east-02.cleardb.net",
+      "port": 3306,
+      "user": "b2fcc93254ccb4",
+      "password": "fb41129d",
+      "database": "heroku_15371160705d2b0"
+    },
+    "pool": {
+      "min": 2,
+      "max": 2
+    }
+  },
+  "paths": {
+    "contentPath": "content"
+  }
+}
