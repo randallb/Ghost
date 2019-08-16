@@ -20,7 +20,12 @@ debug('Initialising Ghost');
 ghost().then(function (ghostServer) {
     // Mount our Ghost instance on our desired subdirectory path if it exists.
     parentApp.use(urlService.utils.getSubdir(), ghostServer.rootApp);
-
+    debug('setting port');
+    const serverConfig = ghostServer.config.get('server');
+    ghostServer.config.set('server', {
+        host: serverConfig.host,
+        port: process.env.PORT || serverConfig.port
+    });
     debug('Starting Ghost');
     // Let Ghost handle starting our server instance.
     return ghostServer.start(parentApp)
