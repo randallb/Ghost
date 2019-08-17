@@ -23,7 +23,6 @@
   "scripts": {
     "start": "node index",
     "dev": "DEBUG=ghost:* grunt dev",
-    "build": "grunt prod",
     "test": "grunt validate",
     "ci": "grunt validate --verbose",
     "ci:regression": "grunt test-regression --verbose",
